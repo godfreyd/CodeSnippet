@@ -23,32 +23,31 @@ const getBabelOptions = ({useESModules}) => {
     }
 }
 
-export default [
-    // {
-    // input: './src/index.ts',
-    // output: [
-    //     {
-    //         dir: 'dist/esm',
-    //         format: 'esm',
-    //         preserveModules: true,
-    //         preserveModulesRoot: 'src'
-    //     },
-    // ],
-    // external,
-    // treeshake: true,
-    // plugins: [
-    //     url(),
-    //     svgr(),
-    //     resolve({
-    //         preferBuiltins: true,
-    //         extensions: ['.ts', '.tsx']
-    //     }),
-    //     typescript(),
-    //     commonjs({
-    //         include: '/node_modules/**',
-    //     }),
-    //     babel(getBabelOptions({ useESModules: true }))
-    // ]}, 
+export default [{
+    input: './src/index.ts',
+    output: [
+        {
+            dir: 'dist/esm',
+            format: 'esm',
+            preserveModules: true,
+            preserveModulesRoot: 'src'
+        },
+    ],
+    external,
+    treeshake: true,
+    plugins: [
+        url(),
+        svgr(),
+        resolve({
+            preferBuiltins: true,
+            extensions: ['.ts', '.tsx']
+        }),
+        typescript(),
+        commonjs({
+            include: '/node_modules/**',
+        }),
+        babel(getBabelOptions({ useESModules: true }))
+    ]}, 
     {
     input: './src/index.ts',
     output: [
