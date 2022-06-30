@@ -53,3 +53,19 @@
     );
     }
     ```
+
+## Run StoryBook
+
+1. Install dependences:
+
+    ```sh
+    npm i
+    ```
+
+2. Run StoryBook
+
+    ```sh
+    npm run storybook
+    ```
+
+Storybook is running on [port 6006](http://localhost:6006/).
