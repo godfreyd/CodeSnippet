@@ -27,7 +27,8 @@ type CodeSnippetType = {
     language: Language;
     /** Начальная строка видимых строк */
     startLine?: number;
-    /** Организация, репозиторий и путь до файла внутри публичного репозитория на GitHub Необязательный параметр ref - коммит/ветка/тег. Например, 'master'
+    /** Организация, репозиторий и путь до файла внутри публичного репозитория
+     * на GitHub Необязательный параметр ref - коммит/ветка/тег. Например, 'master'
      */
     artifactLocation: IartifactLocation;
 };
@@ -94,7 +95,8 @@ export const CodeSnippet: FC<CodeSnippetType> = ({
                 console.error(err);
             }
         })();
-    }, [owner, path, repo]);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
     /* eslint-disable react/no-array-index-key */
     return (
