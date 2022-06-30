@@ -1,0 +1,14 @@
+# misc
+.DS_Store
+
+# build
+dist
+dist-storybook
+
+# dependencies
+node_modules
+
+#ide
+/.idea
+.env
+/.vscode

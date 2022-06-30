@@ -1,0 +1,4 @@
+package.json
+
+# Ignore generated files
+dist/*.*
